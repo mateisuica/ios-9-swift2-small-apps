@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Multiples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="J4D-AI-3MA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1x-d2-wx5">
+                                <rect key="frame" x="0.0" y="25" width="600" height="100"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e8h-f9-Mbi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRJ-2R-5fW">
+                                            <rect key="frame" x="138" y="26" width="323" height="48"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oRJ-2R-5fW" firstAttribute="centerY" secondItem="e8h-f9-Mbi" secondAttribute="centerY" id="K3L-13-xIn"/>
+                                        <constraint firstItem="oRJ-2R-5fW" firstAttribute="centerX" secondItem="e8h-f9-Mbi" secondAttribute="centerX" id="NSv-7S-kBb"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0if-vi-GO8"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1e-hZ-eSc" userLabel="Add">
+                                <rect key="frame" x="180" y="388" width="241" height="124"/>
+                                <state key="normal" image="ADD"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxf-Ud-cgn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL1-Oe-Nrp" userLabel="Play">
+                                <rect key="frame" x="225" y="435" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JL1-Oe-Nrp" secondAttribute="height" multiplier="1:1" id="8tl-BK-fmU"/>
+                                    <constraint firstAttribute="height" constant="150" id="VWZ-0y-BVz"/>
+                                </constraints>
+                                <state key="normal" image="add-2"/>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ke-NP-lpI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multipe to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNC-JD-mxn">
+                                <rect key="frame" x="50" y="388" width="500" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Multiplies" translatesAutoresizingMaskIntoConstraints="NO" id="Rv8-DI-U4J">
+                                <rect key="frame" x="201" y="46" width="200" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rv8-DI-U4J" secondAttribute="height" multiplier="493:147" id="BWq-kT-LTz"/>
+                                    <constraint firstAttribute="width" constant="300" id="jFX-WQ-Qyl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J4D-AI-3MA" secondAttribute="bottom" id="6SP-V7-w7K"/>
+                            <constraint firstItem="e1x-d2-wx5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.25" id="AG2-fe-kI1"/>
+                            <constraint firstItem="T1e-hZ-eSc" firstAttribute="centerX" secondItem="J4D-AI-3MA" secondAttribute="centerX" id="Asu-S8-pNn"/>
+                            <constraint firstItem="Rv8-DI-U4J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.25" id="Fd0-fU-NOr"/>
+                            <constraint firstItem="e1x-d2-wx5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="GER-dR-71W"/>
+                            <constraint firstItem="J4D-AI-3MA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Gzm-RI-NCR"/>
+                            <constraint firstItem="T1e-hZ-eSc" firstAttribute="centerY" secondItem="J4D-AI-3MA" secondAttribute="centerY" multiplier="1.5" id="IKL-1d-HPZ"/>
+                            <constraint firstItem="J4D-AI-3MA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="LlB-Eb-JpO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J4D-AI-3MA" secondAttribute="trailing" constant="-20" id="PDx-Az-n9M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gNC-JD-mxn" secondAttribute="trailing" constant="30" id="Pme-9p-0od"/>
+                            <constraint firstItem="e1x-d2-wx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SQC-ZO-na5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e1x-d2-wx5" secondAttribute="trailing" constant="-20" id="Yw0-PS-9pK"/>
+                            <constraint firstItem="JL1-Oe-Nrp" firstAttribute="top" secondItem="gNC-JD-mxn" secondAttribute="bottom" constant="17" id="gtU-RV-WU7"/>
+                            <constraint firstItem="JL1-Oe-Nrp" firstAttribute="centerY" secondItem="J4D-AI-3MA" secondAttribute="centerY" multiplier="1.7" id="oGf-7C-V0X"/>
+                            <constraint firstItem="gNC-JD-mxn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="qhd-yi-3F4"/>
+                            <constraint firstItem="Rv8-DI-U4J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ro2-rh-Zmg"/>
+                            <constraint firstItem="JL1-Oe-Nrp" firstAttribute="centerX" secondItem="J4D-AI-3MA" secondAttribute="centerX" id="uhe-ZS-Pym"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="T1e-hZ-eSc" id="ten-WT-CFT"/>
+                        <outlet property="logoImage" destination="Rv8-DI-U4J" id="hIj-a9-jwY"/>
+                        <outlet property="multiplyByFIeld" destination="gNC-JD-mxn" id="ila-ZG-fGt"/>
+                        <outlet property="playButton" destination="JL1-Oe-Nrp" id="uXQ-Ds-tJd"/>
+                        <outlet property="resultText" destination="oRJ-2R-5fW" id="ukd-IT-eiE"/>
+                        <outlet property="visualEffectView" destination="e1x-d2-wx5" id="Sp0-Hv-EUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="350"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ADD" width="241" height="124"/>
+        <image name="Background" width="1667" height="1667"/>
+        <image name="Multiplies" width="493" height="147"/>
+        <image name="add-2" width="512" height="512"/>
+    </resources>
+</document>

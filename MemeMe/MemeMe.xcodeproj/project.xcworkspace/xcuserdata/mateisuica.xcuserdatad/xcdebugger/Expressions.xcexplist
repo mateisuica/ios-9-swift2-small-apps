@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TableViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:TableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "memes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.save(UIImage) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imagePickerView.image!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
