@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebRequestTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLR-6Q-fWc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-qA-ShO">
+                                <rect key="frame" x="20" y="562" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6RS-Kb-9YR"/>
+                                    <constraint firstAttribute="width" constant="46" id="ETz-wL-d71"/>
+                                </constraints>
+                                <state key="normal" title="Swift"/>
+                                <connections>
+                                    <action selector="loadSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGt-By-uL6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-Qy-6fO">
+                                <rect key="frame" x="522" y="562" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7qh-lq-joP"/>
+                                    <constraint firstAttribute="width" constant="58" id="Eni-eS-nWf"/>
+                                </constraints>
+                                <state key="normal" title="Gossip"/>
+                                <connections>
+                                    <action selector="loadGossip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2g0-F4-33G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-IY-iaO">
+                                <rect key="frame" x="277" y="562" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="709-GX-z4O"/>
+                                    <constraint firstAttribute="height" constant="30" id="7tO-MG-h4A"/>
+                                </constraints>
+                                <state key="normal" title="Steak"/>
+                                <connections>
+                                    <action selector="loadSteak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ONW-UF-RIy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YBx-qA-ShO" firstAttribute="top" secondItem="tLR-6Q-fWc" secondAttribute="bottom" constant="12" id="3sM-DE-doY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nzq-IY-iaO" secondAttribute="bottom" constant="8" id="RQo-6B-4fh"/>
+                            <constraint firstItem="tLR-6Q-fWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Z0p-N4-E8P"/>
+                            <constraint firstItem="nzq-IY-iaO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="boZ-y3-RaM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tLR-6Q-fWc" secondAttribute="trailing" constant="-20" id="cX0-wt-sXX"/>
+                            <constraint firstItem="fbU-Qy-6fO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="g6X-cY-s1p"/>
+                            <constraint firstItem="YBx-qA-ShO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nqG-86-B7G"/>
+                            <constraint firstItem="tLR-6Q-fWc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="phN-WY-cXn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tLR-6Q-fWc" secondAttribute="bottom" constant="50" id="rCe-nL-rMU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fbU-Qy-6fO" secondAttribute="bottom" constant="8" id="xB6-up-Fav"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="tLR-6Q-fWc" id="22o-wU-Tw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="490"/>
+        </scene>
+    </scenes>
+</document>
