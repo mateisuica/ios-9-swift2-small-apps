@@ -13,6 +13,10 @@
 		A19255881D19C0A1004D9E94 /* Recipez.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A19255861D19C0A1004D9E94 /* Recipez.xcdatamodeld */; };
 		A192558A1D19C0A1004D9E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A19255891D19C0A1004D9E94 /* Assets.xcassets */; };
 		A192558D1D19C0A1004D9E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A192558B1D19C0A1004D9E94 /* LaunchScreen.storyboard */; };
+		A192559D1D19C6D0004D9E94 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192559B1D19C6D0004D9E94 /* Entity+CoreDataProperties.swift */; };
+		A192559E1D19C6D0004D9E94 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192559C1D19C6D0004D9E94 /* Entity.swift */; };
+		A19255A01D19C7F7004D9E94 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192559F1D19C7F7004D9E94 /* RecipeCell.swift */; };
+		A19255A21D19CCEF004D9E94 /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19255A11D19CCEF004D9E94 /* AddRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A19255891D19C0A1004D9E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A192558C1D19C0A1004D9E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A192558E1D19C0A1004D9E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A192559B1D19C6D0004D9E94 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A192559C1D19C6D0004D9E94 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		A192559F1D19C7F7004D9E94 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		A19255A11D19CCEF004D9E94 /* AddRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,8 @@
 		A19255731D19C0A1004D9E94 = {
 			isa = PBXGroup;
 			children = (
+				A192559B1D19C6D0004D9E94 /* Entity+CoreDataProperties.swift */,
+				A192559C1D19C6D0004D9E94 /* Entity.swift */,
 				A192557E1D19C0A1004D9E94 /* Recipez */,
 				A192557D1D19C0A1004D9E94 /* Products */,
 			);
@@ -56,8 +66,10 @@
 		A192557E1D19C0A1004D9E94 /* Recipez */ = {
 			isa = PBXGroup;
 			children = (
+				A19255961D19C67E004D9E94 /* Controller */,
+				A19255951D19C67A004D9E94 /* View */,
+				A19255941D19C675004D9E94 /* Model */,
 				A192557F1D19C0A1004D9E94 /* AppDelegate.swift */,
-				A19255811D19C0A1004D9E94 /* ViewController.swift */,
 				A19255831D19C0A1004D9E94 /* Main.storyboard */,
 				A19255891D19C0A1004D9E94 /* Assets.xcassets */,
 				A192558B1D19C0A1004D9E94 /* LaunchScreen.storyboard */,
@@ -65,6 +77,30 @@
 				A19255861D19C0A1004D9E94 /* Recipez.xcdatamodeld */,
 			);
 			path = Recipez;
+			sourceTree = "<group>";
+		};
+		A19255941D19C675004D9E94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A19255951D19C67A004D9E94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A192559F1D19C7F7004D9E94 /* RecipeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A19255961D19C67E004D9E94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A19255811D19C0A1004D9E94 /* ViewController.swift */,
+				A19255A11D19CCEF004D9E94 /* AddRecipeVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19255821D19C0A1004D9E94 /* ViewController.swift in Sources */,
+				A192559E1D19C6D0004D9E94 /* Entity.swift in Sources */,
+				A19255A21D19CCEF004D9E94 /* AddRecipeVC.swift in Sources */,
 				A19255801D19C0A1004D9E94 /* AppDelegate.swift in Sources */,
+				A19255A01D19C7F7004D9E94 /* RecipeCell.swift in Sources */,
+				A192559D1D19C6D0004D9E94 /* Entity+CoreDataProperties.swift in Sources */,
 				A19255881D19C0A1004D9E94 /* Recipez.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
