@@ -41,6 +41,10 @@ class MissingPersonCell : UICollectionViewCell {
         personimg.layer.borderColor = UIColor.purple().cgColor
     }
     
+    func setDeselected() {
+        personimg.layer.borderWidth = 0
+    }
+    
     func getDataFromUrl(url: NSURL, completion: ((data:NSData?, response: URLResponse?, error: NSError?) -> Void)) {
         URLSession.shared().dataTask(with: url as URL) {
             (data, response, error) in

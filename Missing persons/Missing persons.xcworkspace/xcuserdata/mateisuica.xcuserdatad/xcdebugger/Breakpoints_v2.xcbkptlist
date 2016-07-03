@@ -67,5 +67,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Missing persons/ViewController.swift"
+            timestampString = "489222738.939751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "checkForMatch(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Missing_persons.ViewController.(checkForMatch (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Missing persons"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mateisuica/Developer/ios-9-swift2-small-apps/Missing%20persons/Missing%20persons/ViewController.swift"
+                  timestampString = "489222773.926634"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Missing_persons.ViewController.(checkForMatch (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Missing persons"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mateisuica/Developer/ios-9-swift2-small-apps/Missing%20persons/Missing%20persons/ViewController.swift"
+                  timestampString = "489222773.928355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

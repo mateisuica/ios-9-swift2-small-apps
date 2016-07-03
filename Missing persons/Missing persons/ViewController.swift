@@ -56,9 +56,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         
                         if faceId != nil {
                             FaceService.instange.client?.verify(withFirstFaceId: self.selectedPortion?.faceId, faceId2: faceId, completionBlock: { (result: MPOVerifyResult?, err: NSError?) in
-                                print(result?.confidence)
-                                print(result?.isIdentical)
-                                print(result?.debugDescription)
+                                
+                                if let isIdentical  = result?.isIdentical, confidence = result?.confidence as? Float {
+                                    let isSame = (isIdentical ? "is" : "is not")
+                                    let alert = UIAlertController(title: "Results", message: "You look \(confidence * 100)% alike. It \(isSame) the same person." , preferredStyle: UIAlertControllerStyle.alert)
+                                    let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (action: UIAlertAction) in
+                                        self.dismiss(animated: true, completion: nil)
+                                    })
+                                    alert.addAction(action)
+                                    self.present(alert, animated: true, completion:  nil)
+                                }
+
                             }).resume()
                         }
                     }
@@ -71,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func showErrorAlert() {
-        let alert = UIAlertController(title: "Select person &  Image", message: "Please select a missing person to check and an image to match", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Select person & Image", message: "Please select a missing person to check and an image to match", preferredStyle: UIAlertControllerStyle.alert)
         let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
@@ -110,7 +118,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.cellForItem(at: indexPath) as? MissingPersonCell
         cell?.configureCell(person: selectedPortion!)
         cell?.setSelected()
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? MissingPersonCell
+        cell?.configureCell(person: selectedPortion!)
+        cell?.setDeselected()
     }
 
 }
